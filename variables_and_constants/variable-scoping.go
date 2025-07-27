@@ -21,9 +21,9 @@ func VariableScoping() {
 	x := 10
 	fmt.Println("x outside block:", x)
 	{
+		x := 15
 		y := 20
 		fmt.Println("x inside block:", x)
 		fmt.Println("y inside block:", y)
 	}
-	// fmt.Println("y outside block:", y) // This would cause an error
 }
