@@ -7,6 +7,7 @@ func deleteElement(arr []int, index int) []int {
 	if index < 0 || index >= len(arr) {
 		return arr // Return the original array if index is out of bounds
 	}
+	println(arr[:index], "Array before said index")
 	arr = append(arr[:index], arr[index+1:]...) // Remove the element at the specified index
 	return arr
 }
@@ -73,7 +74,7 @@ func main() {
 	fmt.Println("Finding element 10 in the array using binary search:", findElementBinaryIterative(arr, 10)) // Find element 10 (not present)
 
 	fmt.Println("Finding element 5 in the array using binary search (recursive):", findElementBinaryRecursive(arr, 5, 0, len(arr)-1)) // Find element 5 using binary search recursively
-	
+
 	// Demonstrating deletion
 	arr = deleteElement(arr, 0)               // Delete the first element
 	fmt.Println("Array after deletion:", arr) // Print the array after deletion
